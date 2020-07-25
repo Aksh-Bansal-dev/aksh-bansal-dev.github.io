@@ -6,7 +6,8 @@ function MyApp({ Component, pageProps }) {
   	<>
   		<Head>
   			<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  			<title>Aksh</title>
+  			 <link rel="shortcut icon" type="image/x-icon" href="./briefcase.png" />
+  			<title>Aksh Bansal</title>
   		</Head>
   		<Component {...pageProps} />
   		<style global jsx>{`
