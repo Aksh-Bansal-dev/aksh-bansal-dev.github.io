@@ -2,14 +2,18 @@ import {useState} from "react";
 
 function Navbar(){
 	
-	const [sidebar,setSidebar] = useState("nav-links");
+	const [sidebar,setSidebar] = useState("100%");
+	const [scrollOff, setScrollOff] = useState("");
+
 	const toggle = () =>{
-		if(sidebar==="nav-links"){
-			setSidebar("navOpen");
+		if(sidebar==="100%"){
+			setSidebar("0");
+			setScrollOff("body{overflow: hidden;}");
 			console.log(sidebar);
 			 
 		}else {
-			setSidebar("nav-links");
+			setSidebar("100%");
+			setScrollOff("");
 			console.log(sidebar);
 		}
 	} 
@@ -22,7 +26,7 @@ function Navbar(){
 					<div className="burger" onClick={toggle}>
 						<img src="/menu.svg" />
 					</div>
-					<ul className={sidebar}>
+					<ul className="nav-links">
 						<li className="navlink" onClick={toggle}><a href="#About">About</a></li>
 						<li className="navlink" onClick={toggle}><a href="#Projects">Projects</a></li>
 						<li className="navlink" onClick={toggle}><a href="#Contact">Contact</a></li>
@@ -30,13 +34,14 @@ function Navbar(){
 					</ul>
 				</nav>
 				
-				<style jsx>{`
+				<style global jsx>{`
 
 					nav {
 						display: flex;
 						align-items: center;
 						justify-content: space-between;
 						height: 8vh;
+
 					}
 					.logo {
 						color: cyan;
@@ -45,7 +50,7 @@ function Navbar(){
 						font-family: monospace;
 						cursor: pointer;
 					}
-					.nav-links , .navOpen {
+					.nav-links {
 						
 						list-style: none;
 						display: flex;
@@ -70,31 +75,23 @@ function Navbar(){
 					  		position: absolute;
 					  		top: 0px;
 					  		right: 0px;
-					  		height: 100vh;
+					  		height: 120vh;
 					  		align-items: center;
 					  		flex-direction: column;
 					  		width: 100%;
 					  		background: black;
-					  		transform: translateX(100%);
+					  		transform: translateX(${sidebar});
 					  		transition: transform .5s ;
+
 					  	}
-					  	.navOpen {
-							transform: translateX(0);
-							position: absolute;
-					  		top: 0px;
-					  		right: 0px;
-					  		height: 100vh;
-					  		align-items: center;
-					  		flex-direction: column;
-					  		width: 100%;
-					  		background: black;
-					  		transition: transform .5s ;
-						}
+					  	${scrollOff}
+					  	
 					  	.navlink{
-					  		margin-top: 5vh;
+					  		margin-top: 10vh;
 					  	}
 					  	.navlink a{
 					  		font-size: 1.4rem;
+					  		margin-right: 0;
 					  	}
 					  	.burger {
 					  		display: block;

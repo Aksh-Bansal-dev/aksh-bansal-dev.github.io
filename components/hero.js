@@ -25,6 +25,8 @@ function Hero(){
 		  				background-size: cover;
 		  				background-position: center;
 		  				background-repeat: no-repeat;
+		  				position: relative;
+		  				overflow: hidden;
 					}
 					.heroHeading {
 						width: 50%;
@@ -69,13 +71,17 @@ function Hero(){
 					@media only screen and (max-width: 600px) {
 					  	.main {
 					  		background: rgb(2,36,43);
-background: radial-gradient(circle, rgba(2,36,43,1) 0%, rgba(0,0,0,1) 88%);
+background: radial-gradient(circle, #032b33 0%, rgba(0,0,0,1) 88%);
 					  	}
 					  	.heroHeading {
 					  		width: 100%;
-					  		padding-left: 0;
+					  		padding: 30vh 1vh;
 					  		text-align: center;
 					  		
+					  	}
+					  	.heroHeading h1 {
+					  		font-size: 2.5rem;
+					  		line-height: 1.2;
 					  	}
 					  	
 					}

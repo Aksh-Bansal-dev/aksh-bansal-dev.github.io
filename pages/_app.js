@@ -19,9 +19,7 @@ function MyApp({ Component, pageProps }) {
   				user-select: none;
 
   			}
-  			html{
-  				overflow-x: hidden;
-  			}
+  			
   			
 
   			`}</style>
