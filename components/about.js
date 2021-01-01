@@ -8,11 +8,11 @@ function About(){
 				</h1>
 				<p>
 					I'm a learning web developers, who loves to solve problems and learn <br/>
-					new things. I'm experienced in frontend technologies including <strong>HTML</strong>,<br/>
-					<strong>CSS</strong>, <strong>JS</strong>, <strong>React</strong> and <strong>Next.js</strong>.
+					new things. I'm experienced in web technologies like <strong>Nodejs</strong>,<br/>
+					<strong>HTML-CSS</strong>, <strong>JS</strong>, <strong>React</strong>, <strong>Next.js</strong>, etc.
 				</p>
 				<p>
-					Currently studying Computer Science at IIIT and exploring my <br/>interests.
+					Currently pursuing B.Tech in Computer Science at IIITJ and exploring my <br/>interests.
 				</p>
 				<style jsx>{`
 
