@@ -19,7 +19,7 @@ function Homepage(){
 						<a href="https://github.com/Aksh-Bansal-dev">
 							<img src="./GitHub-Mark-Light-32px.png"/>
 						</a>
-						<a href="https://linkedin.com">
+						<a href="https://www.linkedin.com/in/aksh-bansal-0a1073200/">
 							<img src="./LI-In-Bug.png" className="linkedin"/>
 						</a>
 					</div>
