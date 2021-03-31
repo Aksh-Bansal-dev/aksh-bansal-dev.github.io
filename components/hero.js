@@ -7,11 +7,12 @@ function Hero() {
       <Navbar />
       <div className="heroHeading">
         <h1>
-          Hi, <br />
-          I'm <span>Aksh</span>,<br />
-          web developer.
+          Hey! <br />
+          I'm <span>Aksh Bansal</span>
+          <br />
+          web developer
         </h1>
-        <p>Frontend Developer</p>
+        <p></p>
         <button onClick={() => Router.push("/#Contact")}>Contact Me</button>
       </div>
       <style jsx>{`

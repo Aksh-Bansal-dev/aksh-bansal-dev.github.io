@@ -1,0 +1,22 @@
+.container {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 5px;
+  border: solid silver 2px;
+  margin-top: 2vh;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container h3 {
+  color: white;
+  margin: 2vh;
+  font-size: 1.3 rem;
+}
+
+.container p {
+  color: rgb(209, 209, 209);
+  margin: 2vh;
+}
