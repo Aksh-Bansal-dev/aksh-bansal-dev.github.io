@@ -1,22 +1,14 @@
 ---
 // Component Imports
 import MainHead from '../components/MainHead.astro';
-import Button from '../components/Button/index.jsx';
 import Nav from '../components/Nav/index.jsx';
 import Footer from '../components/Footer/index.jsx';
-import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
 
-// Data Fetching: List all Markdown posts in the repo.
-const projects = await Astro.glob('./project/**/*.md');
-const featuredProject = projects[0];
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
 ---
 
 <html lang="en">
 	<head>
-		<MainHead title="Jeanine White: Personal Site" description="Jeanine White: Developer, Speaker, and Writer..." />
+		<MainHead title="Aksh Bansal: Personal Site" description="Aksh Bansal: Developer" />
 		<style lang="scss">
 			$w-s: 750px;
 
@@ -28,13 +20,11 @@ const featuredProject = projects[0];
 					height: 45vw;
 				}
 			}
-
 			.img {
 				display: block;
 				width: 100%;
 				height: auto;
 			}
-
 			.gradient,
 			.gradient2 {
 				background-image: url('/assets/mesh-gradient.jpg');
@@ -95,8 +85,11 @@ const featuredProject = projects[0];
 			.sectionTitle {
 				font-weight: 700;
 				font-size: var(--f-u8);
-				margin-top: 4rem;
+				margin-top: 2rem;
 				margin-bottom: 2rem;
+				@media (min-width: 1200px) {
+					margin-top: 10rem;
+				}
 			}
 
 			.role {
@@ -198,33 +191,26 @@ const featuredProject = projects[0];
 			<div class="gradient2"></div>
 			<div class="overlay">
 				<h1 class="title">
-					<small class="subtitle">The personal site of </small>Jeanine White
+					<small class="subtitle">The personal site of </small>Aksh Bansal
 				</h1>
 				<div>
 					<span class="role">👩‍💻 Developer <span class="invert">👩‍💻 Developer</span></span>&nbsp;
-					<span class="role">🎤 Speaker <span class="invert">🎤 Speaker</span></span>&nbsp;
-					<span class="role">✏️ Writer <span class="invert">✏️ Writer</span></span>
 				</div>
-				<p class="desc">Lover of dogs, roadtrips, and poetry.</p>
+				<p class="desc">Passionate about tech.</p>
 			</div>
 		</header>
-		<main class="wrapper mt4 mb4">
+		<main class="wrapper mb4">
 			<div class="grid">
 				<div class="section">
-					<h3 class="sectionTitle">Selected Work</h3>
-					<PortfolioPreview project={featuredProject} />
-					<div class="tac mt4">
-						<a href="/projects">
-							<Button>View All</Button>
-						</a>
-					</div>
+					<img src="/assets/profile2022.jpg" alt="aksh" />
 				</div>
 				<div class="section">
 					<h3 class="sectionTitle">About me</h3>
 					<p class="bio">
-						<span>Hello!</span> I’m Jeanine, and this is my website. It was made using{' '}
-						<a href="https://github.com/withastro/astro" target="_blank" rel="nofollow"> Astro </a>, a new way to build static sites. This is just an example template for you to
-						modify.
+						<span>Hello!</span> I’m Aksh, and this is my website. It was made using{' '}
+						<a href="https://github.com/withastro/astro" target="_blank" rel="nofollow"> 
+							Astro
+						</a>, a new way to build static sites. 
 					</p>
 					<p>
 						<a href="/about">Read more</a>
